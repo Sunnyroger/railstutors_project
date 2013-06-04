@@ -1,0 +1,17 @@
+<h4>Welcome To The World of Dota</h4>
+<%= link_to "创建Post", new_post_path, :class => "btn pull-right btn-primary"%>
+<div class="clear"></div>
+<% @posts.each do |post| %>
+	<section class="post span12" >
+		<div class="comment-count">
+			<%= link_to image_tag("vote-up.gif", :width => 25, :height => 25, alt: "Vote Up"), post_votes_path(post, :direction => "up"), :method => post, :class =>"vote-up" %>
+			<div class="btn btn-info btn-small vote-count"><%= post.vote_count %></div>
+			<%= link_to image_tag("vote-down.gif", :width => 25, :height => 25, alt: "Vote Down"), post_votes_path(post, :direction => "down"), :method => post, :class => "vote-down" %>
+		</div>
+		<div class="span11">
+			<div class="post-content" ><%= link_to post.title , post.url %></div>
+			<%= link_to "#{post.comments.count} Comments",post_path(post), class: "comment" %>
+			<%= link_to "Share",posts_path, class: "share" %>
+		</div>
+	</section>
+<% end %>

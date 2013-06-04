@@ -1,0 +1,48 @@
+@import "bootstrap";
+body {padding-top: 60px;}
+@import "bootstrap-responsive";
+a,ul,li{padding:0px; margin: 0px; text-decoration : none; list-style : none;}
+a:hover{text-decoration : none;}
+.clear{clear : both;}
+.post{
+	border-radius : 5px;
+	background-color : #EEE;
+	margin : 20px;
+	padding : 15px 10px 15px 25px;
+	position : relative;
+ }
+ .comment-count{
+ 	float : left;
+ 	width : 40px;
+ 	display : inline-block;
+ }
+.vote-up{
+	float : left;
+}
+.vote-down{
+	float :left;
+}
+.vote-count{
+	float:left;
+}
+.post-content{
+	font-size : 20px;
+	word-wrap:break-word;
+
+}
+
+.comment{
+	position : absolute;
+	left : 100px;
+	bottom : 15px;
+	margin-top: 20px;
+}
+.share{
+	position : absolute;
+	right : 50px;
+	bottom : 15px;
+	margin-top: 20px;
+}
+.comment-content{
+	margin: 0 20px;
+}

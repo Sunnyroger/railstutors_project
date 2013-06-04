@@ -1,0 +1,9 @@
+<h3><%= link_to @post.title, @post.url %></h3>
+<h4>All <%= @post.comments.count %> Comments</h4>
+<%= link_to "Add My Comment",new_post_comment_path(params[:id]), class: "btn btn-primary pull-right" %>
+<div class="clear"></div>
+<div class="comment-content">
+  <% @post.comments.each do |comment| %>
+  	<p><%= comment.content %></p>
+  <% end %>
+</div>
